@@ -78,7 +78,7 @@ export async function POST(request) {
       method: "POST",
       headers: { "x-goog-api-key": process.env.GEMINI_API_KEY, "Content-Type": "application/json" },
       body: JSON.stringify({ systemInstruction: { parts: [{ text: SYSTEM }] }, contents, generationConfig: { temperature: 0.5, maxOutputTokens: 700 } })
-    }, 15000);
+    }, 25000);
     const data = await r.json().catch(() => ({}));
     if (!r.ok) {
       console.error("[gemini] status", r.status, "duration_ms", Date.now()-start);
