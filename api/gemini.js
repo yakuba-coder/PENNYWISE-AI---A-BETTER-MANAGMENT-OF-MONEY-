@@ -1,4 +1,3 @@
-
 import {
   json,
   readJson,
@@ -228,7 +227,7 @@ export async function POST(request) {
     },
   ];
 
-  const model = process.env.GEMINI_MODEL || "gemini-3.8-flash";
+const model = process.env.GEMINI_MODEL || "gemini-4-argon";
   const start = Date.now();
 
   try {
